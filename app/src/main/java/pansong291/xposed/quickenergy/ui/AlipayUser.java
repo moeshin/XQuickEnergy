@@ -23,7 +23,7 @@ public class AlipayUser
   if(list == null)
   {
    list = new ArrayList<AlipayUser>();
-   Set idSet = Config.getIdMap().entrySet();
+   Set<Map.Entry> idSet = Config.getIdMap().entrySet();
    for(Map.Entry entry: idSet)
    {
     list.add(new AlipayUser(entry.getKey().toString(), entry.getValue().toString()));

@@ -508,7 +508,7 @@ public class Config
   if(hasIdMapChanged)
   {
    StringBuilder sb = new StringBuilder();
-   Set idSet = getIdMap().entrySet();
+   Set<Map.Entry> idSet = getIdMap().entrySet();
    for(Map.Entry entry: idSet)
    {
     sb.append(entry.getKey());
@@ -525,7 +525,7 @@ public class Config
  {
   if(selfId == null)
   {
-   Set idSet = getIdMap().entrySet();
+   Set<Map.Entry> idSet = getIdMap().entrySet();
    for(Map.Entry entry: idSet)
     if(!entry.getValue().toString().contains("*"))
     {
@@ -555,7 +555,7 @@ public class Config
  public static String[] getUnknownIds()
  {
   List<String> idList = new ArrayList<String>();
-  Set idSet = getIdMap().entrySet();
+  Set<Map.Entry> idSet = getIdMap().entrySet();
   for(Map.Entry entry: idSet)
    if(entry.getValue().toString().contains("(*)"))
     idList.add(entry.getKey().toString());
